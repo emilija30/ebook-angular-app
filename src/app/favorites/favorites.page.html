@@ -1,0 +1,15 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="primary" size="large">
+      My favorites
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-favorite-element *ngFor="let book of books" [book]="book"></app-favorite-element>
+</ion-content>

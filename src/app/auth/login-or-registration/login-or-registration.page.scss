@@ -1,0 +1,71 @@
+
+ion-header {
+  --background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #c900ab;
+  font-family: "Lucida Handwriting", "Courier New", monospace;
+  
+}
+
+.content {
+  --padding-top: 20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.content-grid {
+  width: 100%;
+}
+
+.content-row {
+  display: flex;
+  justify-content: center;
+}
+
+.col-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "Lucida Handwriting", "Courier New", monospace;
+  color: #c900ab;
+}
+
+.book {
+  text-align: center;
+}
+
+.book img {
+  width: 100%;
+  max-width: 300px;
+}
+
+  ion-button {
+    margin-top: 10px;
+    --padding-start: 40px; 
+    --padding-end: 40px;
+    font-size: 1.2em; 
+    width: 100%; 
+    max-width: 300px; 
+  }
+  ion-button[type="submit"][color="primary"][shape="round"] {
+    
+    color: white;
+    font-family: "Lucida Handwriting", "Courier New", monospace;
+  }

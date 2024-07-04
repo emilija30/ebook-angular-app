@@ -1,0 +1,23 @@
+<ion-card>
+
+  <img alt="Book" src="{{book.imageUrl}}" />
+  <ion-card-header>
+    <ion-card-title>{{book.name}}</ion-card-title>
+    <ion-card-subtitle>{{book.author}}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content class="content-text">
+
+    <br>
+    Genre: {{book.genre}}
+    <br>
+    <br>
+    {{book.description}}
+
+  </ion-card-content>
+<ion-card-content class="content-icons">
+  <ion-icon name="pencil" size="large"  color="secondary" class = "pencil-icon" (click)="updateBook(book.id, book.name, book.author, book.description, book.genre, book.imageUrl, book.iconName)"></ion-icon>
+
+  <ion-icon name="trash" size="large" color="secondary" (click)="deleteBook(book.id)"></ion-icon>
+</ion-card-content>
+</ion-card>

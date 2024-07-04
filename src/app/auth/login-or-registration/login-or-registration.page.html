@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="header-title">EBook</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content">
+  <ion-grid class="content-grid">
+    <ion-row class="content-row">
+      <ion-col size-sm="6" offset-sm="3" class="col-centered">
+        <h1 class="title">EBook</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row class="content-row">
+      <ion-col size-sm="6" offset-sm="3" class="col-centered">
+        <div class="book">
+          <img src="assets/images/book.png" alt="book">
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="content-row">
+      <ion-col size-sm="6" offset-sm="3" class="col-centered">
+        <ion-button type="submit" color="primary" shape="round" expand="block" (click)="toLogin()">Log in</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="content-row">
+      <ion-col size-sm="6" offset-sm="3" class="col-centered">
+        <ion-button type="submit" color="primary" shape="round" expand="block" (click)="toRegister()">Register</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

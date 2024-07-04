@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="secondary">
+    <ion-searchbar color="primary" animated="true" placeholder="Search books" show-clear-button="always" [(ngModel)]="searchTerm" (search)="filterResults(searchTerm)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" color="primary">
+        Books
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-book-element *ngFor="let book of filteredBooks" [book]="book"></app-book-element>
+</ion-content>

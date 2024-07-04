@@ -1,20 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ <ion-grid>
+   <ion-row>
+     <ion-col size-sm="6" offset-sm="3">
+      <div class="about">
+        The Ebook is a highly practical and fascinating application where you can add, edit, and delete books. You can also save your favorite books. Who knows, your next favorite book might be waiting for you right here! Let's get started!<br>
+       </div>
+      <div class="book">
+         <img src="assets/images/book.png" alt="book">
+       </div>
+      
+     </ion-col>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+   </ion-row>
+
+ </ion-grid>
+
+  <ion-tabs content="main-content">
+    <ion-tab-bar class="tab-bar">
+
+      <ion-tab-button  routerLink="/mybooks" class="tab-button">
+        <ion-icon name="book"></ion-icon>
+        My books
+      </ion-tab-button>
+      <ion-tab-button routerLink="/favorites" class="tab-button">
+        <ion-icon name="heart"></ion-icon>
+        Favorites
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
+

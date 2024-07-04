@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseApiKey: 'AIzaSyBVfXG4-B0SB5mCrNpYF6cr5_Ks70320tk',
+  firebaseRealtimeDatabaseUrl: 'https://ebook-ba8c1-default-rtdb.europe-west1.firebasedatabase.app/'
 };
 
 /*
