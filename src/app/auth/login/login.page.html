@@ -44,7 +44,11 @@
       <ion-button type = "submit" color ="primary" shape = "round" expand = "block">Log in</ion-button>
     </ion-col>
   </ion-row>
-
+  <ion-row *ngIf="errorMessage">
+    <ion-col>
+      <p>{{errorMessage}}</p>
+    </ion-col>
+  </ion-row>
     <ion-row style="margin-top: 50px">
       <ion-col size-sm="6" offset-sm="3">
         <ion-label>You do not have an account?</ion-label>
