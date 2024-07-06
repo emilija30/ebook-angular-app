@@ -117,7 +117,7 @@ export class BookServiceService {
               });
             }
           }
-
+          
           return books;
         }),
         tap((books) => {
@@ -131,7 +131,7 @@ export class BookServiceService {
   }
 
   updateBook(id: string, updatedBook: { name: string, author: string, description: string, genre: string, imageUrl: string, iconName: string }) {
-    return this.http.put(`${this.baza}/books/${id}.json?auth=${this.authService.getToken()}`, updatedBook);
+    return this.http.patch(`${this.baza}/books/${id}.json?auth=${this.authService.getToken()}`, updatedBook);
   }
 
   updateBookID(id: string, updatedBook: { name: string, author: string, description: string, genre: string, imageUrl: string, user_id: string, iconName: string }) {

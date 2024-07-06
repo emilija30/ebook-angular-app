@@ -35,15 +35,15 @@ export class MybookElementComponent  implements OnInit {
     await alert.present();
   }
 
-  async presentAlertUpdate() {
-    const alert = await this.alertCtrl.create({
-      header: 'Book updated!',
-      message: 'You have successfully updated this book!',
-      buttons: ['GOOD'],
-    });
+  // async presentAlertUpdate() {
+  //   const alert = await this.alertCtrl.create({
+  //     header: 'Book updated!',
+  //     message: 'You have successfully updated this book!',
+  //     buttons: ['GOOD'],
+  //   });
 
-    await alert.present();
-  }
+  //   await alert.present();
+  // }
 
   deleteBook(bookID: string) {
     this.alertCtrl.create({
@@ -75,6 +75,5 @@ export class MybookElementComponent  implements OnInit {
 
   updateBook(id: string, name: String, author: String, description: String, genre: String, imageUrl: String, iconName: string) {
     this.mbp.updateBook(id, name, author, description, genre, imageUrl, iconName);
-    this.presentAlertUpdate();
   }
 }

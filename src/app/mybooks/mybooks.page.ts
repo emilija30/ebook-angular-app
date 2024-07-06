@@ -24,7 +24,7 @@ export class MybooksPage implements OnInit {
 
   ngOnInit() {
     this.bookService.getBooksById().subscribe((bookData)=>{
-      console.log(bookData);
+      console.log('knjige', bookData);
       this.books = bookData;
     });
   }

@@ -2,6 +2,8 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from "@ionic/angular";
 import { NgForm } from "@angular/forms";
 import { AuthService } from "../auth/auth.service";
+import {AlertController} from "@ionic/angular";
+
 
 @Component({
   selector: 'update-book.modal',
@@ -29,9 +31,19 @@ export class UpdateBookModalComponent implements OnInit {
   
   @ViewChild("f", { static: true }) form: NgForm;
 
-  constructor(private modalCtrl: ModalController, private authService: AuthService) { }
+  constructor(private modalCtrl: ModalController, private authService: AuthService, private alertCtrl: AlertController) { }
 
   ngOnInit() { }
+
+  async presentAlertUpdate() {
+    const alert = await this.alertCtrl.create({
+      header: 'Book updated!',
+      message: 'You have successfully updated this book!',
+      buttons: ['GOOD'],
+    });
+
+    await alert.present();
+  }
 
   onCancel() {
     this.modalCtrl.dismiss();
@@ -41,6 +53,7 @@ export class UpdateBookModalComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
+    this.presentAlertUpdate()
 
     this.modalCtrl.dismiss({
       bookData: {
