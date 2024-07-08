@@ -4,3 +4,6 @@ ion-item.ion-valid {
 ion-item.ion-invalid {
   --highlight-color-invalid: var(--ion-color-danger);
 }
+.error-message {
+  color: red;
+}
